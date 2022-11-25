@@ -10,15 +10,9 @@ class Ques extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      close: false,
+      index: null,
     };
   }
-
-  showAnswer = () => {
-    this.setState({
-      close: !this.state.close,
-    });
-  };
 
   render() {
     return (
@@ -26,10 +20,17 @@ class Ques extends React.Component {
         {Data.map((data, i) => {
           return (
             <>
-              <li onClick={this.showAnswer} >
-                <p className="ques"> {data.Q}</p>
-
-                <Content answer={this.state.close ? data.A : ``} />
+              <li
+                onClick={() => {
+                  this.setState({
+                    index: this.state.index === i ? null : i,
+                  });
+                }}
+              >
+                <h2 className="ques">
+                  {data.Q} {this.state.index === i ? `👆` : `👇`}
+                </h2>
+                {i === this.state.index && <Content answer={data.A} />}
               </li>
             </>
           );
