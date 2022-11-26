@@ -5,7 +5,12 @@ function Display(props) {
     <ul className="menuBox">
       {props.items.map(item => {
         return (
-          <li key={item.title}>
+          <li
+            key={item.title}
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             <figure>
               <img className="full-width" src={item.img} alt={item.title} />
             </figure>
