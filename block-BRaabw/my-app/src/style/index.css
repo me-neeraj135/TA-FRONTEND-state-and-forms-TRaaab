@@ -1,0 +1,194 @@
+/** @format */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import "./reset.css";
+@import "./flex.css";
+@import "./global.css";
+
+/* custom -style */
+
+.textCenter {
+  text-align: center;
+}
+.textEnd {
+  text-align: right;
+}
+
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+  right: 0;
+}
+
+/* header */
+
+header {
+  padding: 1rem 3rem;
+  background-color: black;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+}
+
+.productNum {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  margin-right: 1rem;
+  text-transform: capitalize;
+  color: white;
+}
+
+.cartBox {
+  height: 2rem;
+  font-weight: bolder;
+  margin-left: 2rem;
+  position: relative;
+}
+.cartCount {
+  position: absolute;
+  top: -0.5rem;
+  right: 0.3rem;
+  color: white;
+}
+
+/* aside */
+aside {
+  width: 20%;
+}
+.sizeBox {
+  background-color: gray;
+}
+.sizeBtn {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 50%;
+  margin: 1rem;
+  padding: 1.5rem;
+  background-color: lightgrey;
+}
+.sizeBtn:hover {
+  color: white;
+  background-color: black;
+}
+
+.asideMainContainer {
+  padding-top: 4rem;
+}
+
+/* main */
+main {
+  width: 80%;
+}
+.title {
+  font-size: 0.9rem;
+  font-weight: bolder;
+}
+.product {
+  margin: 0.5rem;
+}
+.product:hover {
+  box-shadow: 0 0 5px silver;
+  border-radius: 0.3rem;
+}
+
+/* cart */
+
+.cart {
+  height: 100vh;
+  cursor: pointer;
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  background-color: gray;
+  padding: 1rem 1rem 5rem 1rem;
+}
+.cart::-webkit-scrollbar {
+  display: none;
+}
+.closeBtn {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.808);
+}
+.removeItem {
+  font-size: 0.7rem;
+  cursor: pointer;
+  color: white;
+  border-radius: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.493);
+  padding: 0.5rem;
+}
+.quantityBtn {
+  width: 2rem;
+
+  font-size: 1rem;
+  font-weight: bolder;
+  margin-right: 0.3rem;
+}
+.cartDtl {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  color: white;
+}
+.price {
+  font-size: 0.8rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+  color: white;
+}
+.shippingBtn {
+  display: inline-block;
+  font-size: 0.5rem;
+  text-transform: capitalize;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 0.1rem;
+  background-color: black;
+}
+
+.crtItmBx {
+  padding-left: 0.5rem;
+}
+
+.totalAmountBx {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 1rem;
+}
+.totalAmountX {
+  color: white;
+}
+.amountPrice {
+  color: yellow;
+}
+.chkBtn {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: bolder;
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  background-color: black;
+}
